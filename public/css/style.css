@@ -35,6 +35,11 @@ body {
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
 	background-color:#306;
 }
+@media (max-width: 480px) {
+  .navbar-brand{
+	font-size:14px;
+  }
+}
 /*
  * Sidebar
  */
