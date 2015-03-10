@@ -15,6 +15,7 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="signin"/>
           <actionMethod actionName="list"/>
+          <actionMethod actionName="signed"/>
         </controllerFile>
         <controllerFile controllerName="Map">
           <actionMethod actionName="index"/>
@@ -25,7 +26,9 @@
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory enabled="false"/>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <modelFile modelName="Shop"/>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
       <viewsDirectory>
@@ -45,19 +48,10 @@
           <viewControllerScriptsDirectory forControllerName="Shop">
             <viewScriptFile forActionName="list"/>
           </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Map">
-            <viewScriptFile forActionName="index"/>
+          <viewControllerScriptsDirectory forControllerName="Shop">
+            <viewScriptFile forActionName="signed"/>
           </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Map">
-            <viewScriptFile forActionName="shfw"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Map">
-            <viewScriptFile forActionName="wyfw"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="Map">
-            <viewScriptFile forActionName="yzfw"/>
-          </viewControllerScriptsDirectory>
-        </viewScriptsDirectory>
+                 </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
       </viewsDirectory>
