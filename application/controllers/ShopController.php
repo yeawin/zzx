@@ -11,8 +11,9 @@ class ShopController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
-//         $Shop = new Application_Model_Shop();
-//         $shoplist = $Shop->getShops();
+        $Shop = new Application_Model_Shop();
+        $shoplist = $Shop->getShops();
+        $this->view->shoplist = $shoplist;
     }
     
     public function listAction()
