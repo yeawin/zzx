@@ -16,6 +16,12 @@
           <actionMethod actionName="signin"/>
           <actionMethod actionName="list"/>
         </controllerFile>
+        <controllerFile controllerName="Map">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="shfw"/>
+          <actionMethod actionName="wyfw"/>
+          <actionMethod actionName="yzfw"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory enabled="false"/>
@@ -38,6 +44,18 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Shop">
             <viewScriptFile forActionName="list"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Map">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Map">
+            <viewScriptFile forActionName="shfw"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Map">
+            <viewScriptFile forActionName="wyfw"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Map">
+            <viewScriptFile forActionName="yzfw"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
