@@ -154,3 +154,19 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+.borderd{
+	border:1px solid #ddd;
+}
+
+.navbar-inverse .navbar-brand{
+	color:#eee;
+}
+.navbar-inverse .navbar-brand:hover{
+	color:#fff;
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: #eee;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #fff;
+}

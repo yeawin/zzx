@@ -4,12 +4,13 @@
  * @date 2015-2-25
  */
 var Public = new PublicClass();
+var promise = false;
 
 $(function(){
 	$(".nav-sidebar li").bind("click", function(){
 		$(".nav-sidebar li").removeClass("active");
 		$(this).addClass("active");
-		if (1 == $(this).index()) addShop();
+		if (1 == $(this).index()) addShopInit();
 		else if (0 == $(this).index()) listShop();
 	});
 });
@@ -17,7 +18,7 @@ $(function(){
 /**
  * 商家入驻
  */
-function addShop()
+function addShopInit()
 {
 	$.ajaxSetup({
 		 cache: true,
@@ -28,15 +29,51 @@ function addShop()
     $.ajax({
     	url: "./shop/signin?" +  Math.random(),   // 提交的页面
         type: "POST",                   // 设置请求类型为"POST"，默认为"GET"
-	    async : false,
+	    async : true,
 	    dataType : "text",
 	    beforeSend : Public.ShowLoading,
 	    complete : Public.HideLoading,
 	    error: Public.ShowAjaxError,
 	    success: function(data){
-	    	$("#shop_container").html(data);	    	
+	    	$("#shop_container").html(data);	
+	    	addShopSubmit();
+	    	$("input[name=ServicePromise]").bind("click", function(){
+	    		if($(this).is(':checked')) {
+	    			promise = true;
+	    		} else {
+	    			promise = false;
+	    		}
+	    	});
 	    }
   });
+}
+
+
+/**
+ * 商家入驻提交数据库
+ */
+function addShopSubmit()
+{
+	//提交表单
+	var opts = {
+			url:'./shop/signed',
+	        type:      'post' ,      
+	        dataType:  'text'   ,    
+			beforeSubmit : function(){
+				if (!promise) {
+					alert('请同意服务承诺！');
+					return false;
+				}
+			},
+		    beforeSend: Public.ShowLoading,
+			complete: Public.HideLoading,
+	        error: Public.ShowAjaxError,
+	        success: function(data){
+	        	$("#shop_container").html(data);	
+	        }
+
+		};	
+	$("form[name=FormShopSignin]").ajaxForm(opts);
 }
 
 /**
@@ -53,7 +90,7 @@ function listShop()
     $.ajax({
     	url: "./shop/list?" +  Math.random(),   // 提交的页面
         type: "POST",                   // 设置请求类型为"POST"，默认为"GET"
-	    async : false,
+	    async : true,
 	    dataType : "text",
 	    beforeSend : Public.ShowLoading,
 	    complete : Public.HideLoading,

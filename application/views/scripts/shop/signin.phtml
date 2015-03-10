@@ -1,22 +1,56 @@
-<form role="form" id="shop_signin">
+<form role="form" id="shop_signin" name="FormShopSignin">
   <div class="form-group">
     <label for="shop_name">商家名称</label>
-    <input type="text" class="form-control" id="shop_name" name="ShopName" placeholder="商家名称">
+    <input type="text" class="form-control" id="shop_name" name="ShopName" placeholder="商家名称" required>
   </div>
   <div class="form-group">
-    <label for="industry_type">行业类型</label>
-    <input type="text" class="form-control" id="industry_type" name="IndustryType" placeholder="行业类型">
+    <label for="shop_logo">LOGO</label>
+    <input type="file" id="shop_logo" name="ShopLogo">
+    <p class="help-block">选择小于200KB的文件文件上传</p>
   </div>
   <div class="form-group">
-  <label for="industry_type">shop_scale行业类型</label>
-    <select class="form-control" name="ShopScale" id="shop_scale">
-  <option>1-10人</option>
-  <option>10-20人</option>
-  <option>20-50人</option>
-  <option>50-100人</option>
-  <option>100人以上</option>
-</select>
+    <label for="service_type">服务类型</label>
+    <input type="text" class="form-control" id="service_type" name="ServiveType" placeholder="服务类型" required>
   </div>
+  <div class="form-group">
+    <label for="address">商家地址</label>
+    <input type="text" class="form-control" id="address" name="ShopAddress" placeholder="商家地址" required>
+  </div>
+  <div class="form-group">
+    <label for="mail">描述</label>
+    <textarea class="form-control" rows="3" placeholder="商家描述" name="ShopRemark" required></textarea>
+  </div>
+<!--   <div class="form-group"> -->
+<!--     <label for="shop_scale">行业类型</label> -->
+<!--     <select class="form-control" name="ShopScale" id="shop_scale"> -->
+<!--       <option>50人以下</option> -->
+<!--       <option>50-100人</option> -->
+<!--       <option>100-500人</option> -->
+<!--       <option>500-1000人</option> -->
+<!--       <option>1000人以上</option> -->
+<!--    </select> -->
+<!--   </div> -->
 
-  <button type="submit" class="btn btn-default">Submit</button>
+<!--   <div class="form-group"> -->
+<!--     <label for="phone">服务电话</label> -->
+<!--     <input type="text" class="form-control" id="phone" name="phone" placeholder="电话号码"> -->
+<!--   </div> -->
+<!--   <div class="form-group"> -->
+<!--     <label for="mail">电子邮箱</label> -->
+<!--     <input type="text" class="form-control" id="mail" name="mail" placeholder="电子邮箱"> -->
+<!--   </div> -->
+      <div class="form-group">
+         <p class="text-left"><a href="#">服务承诺（条款）</a></p>
+         <div class="checkbox">
+            <label>
+              <input type="checkbox" name="ServicePromise"> 我同意上述服务承诺
+            </label>
+          </div>
+      </div>
+<!--    <div class="form-group"> -->
+<!--     <label for="service_promise">服务承诺</label> -->
+<!--     <input type="file" id="service_promise" name="ServicePromise"> -->
+<!--     <p class="help-block">我同意上述服务承诺</p> -->
+<!--   </div> -->
+  <button type="submit" class="btn btn-primary">提交</button>
 </form>
