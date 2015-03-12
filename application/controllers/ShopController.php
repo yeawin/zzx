@@ -74,6 +74,7 @@ class ShopController extends Zend_Controller_Action
             }
             $data['shop_name'] = $Params["ShopName"];       //商家名称
             $data['busy_type'] = $Params["ServiveType"];    //服务类型
+            $data['phone'] = $Params["ServicePhone"];      //商家地址
             $data['address'] = $Params["ShopAddress"];      //商家地址
             $data['remark'] = $Params["ShopRemark"];        //商家描述
             $data['shop_logo'] = ".".$link;              //商家Logo

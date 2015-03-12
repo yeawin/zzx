@@ -1,5 +1,9 @@
+<?php include 'functions.php';?>
+<?php $LENGTH = 100;?>
 <?php foreach ($this->shoplist as $shop) {?>
-
+<?php if (strlen($shop["remark"]) > $LENGTH) {
+    $remark = cutStr($shop["remark"], $LENGTH)."......";
+}?>
 <div class="media">
   <div class="media-left">
     <a href="#">
@@ -10,7 +14,7 @@
     <h4 class="media-heading"><?php echo $shop["shop_name"]?></h4>
     <p><mark><?php echo $shop["busy_type"]?></mark></p>
     <address><?php echo $shop['address'];?></address>
-    <p><?php echo $shop["remark"];?></p>
+    <p><?php echo $remark;?></p>
   </div>
 </div>
 <?php }?>

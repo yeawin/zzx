@@ -23,6 +23,12 @@
           <actionMethod actionName="wyfw"/>
           <actionMethod actionName="yzfw"/>
         </controllerFile>
+        <controllerFile controllerName="Demo">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="sqgl"/>
+          <actionMethod actionName="jzgl"/>
+          <actionMethod actionName="shfw"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory enabled="false"/>
@@ -51,7 +57,19 @@
           <viewControllerScriptsDirectory forControllerName="Shop">
             <viewScriptFile forActionName="signed"/>
           </viewControllerScriptsDirectory>
-                 </viewScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Demo">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Demo">
+            <viewScriptFile forActionName="sqgl"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Demo">
+            <viewScriptFile forActionName="jzgl"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Demo">
+            <viewScriptFile forActionName="shfw"/>
+          </viewControllerScriptsDirectory>
+        </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
       </viewsDirectory>

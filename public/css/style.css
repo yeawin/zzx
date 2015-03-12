@@ -170,3 +170,9 @@ body {
 .navbar-inverse .navbar-nav>li>a:hover {
 	color: #fff;
 }
+#shop_container .media{
+	border-bottom:1px solid #ddd;
+}
+address{
+	margin-bottom:10px;
+}
