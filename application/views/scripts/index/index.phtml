@@ -7,15 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="中智信智慧社区,智慧社区,厦门智慧社区">
     <meta name="author" content="">
-    <link rel="icon" href="/images/favicon.jpg">
+    <link rel="icon" href="<?php echo $this->baseUrl("/static/images/favicon.jpg")?>">
 
     <title>中智信智慧社区</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/jquery.plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/css/style.css" rel="stylesheet">
+    <?php echo $this->headLink();?>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -52,14 +49,14 @@
           <li><a href="http://www.54kaka.com/Devccweb/Login.aspx?u=13860157963&p=888888" target="_blank"><span class="glyphicon glyphicon-user"></span>智慧社区管理系统</a></li>       
             <li><a href="http://110.86.13.82:1500" target="_blank"><span class="glyphicon glyphicon-home"></span>智能建筑管理系统</a></li>            
             <li><a href="http://121.40.148.177:10808/xm9943/loginWx" target="_blank"><span class="glyphicon glyphicon-weixin"></span>社区微信管理系统</a></li>
-            <li><a href="/shop"><span class="glyphicon glyphicon-shopping-cart"></span>中智信社区商家入口</a></li>
+            <li><a href="<?php echo $this->baseUrl("/shop");?>"><span class="glyphicon glyphicon-shopping-cart"></span>中智信社区商家入口</a></li>
           </ul>
           <ul class="nav nav-sidebar borderd">
             <li><a href="#"><span class="glyphicon glyphicon-qq"></span>: 1355850897</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-phone-alt"></span>: 0592-5033910</a></li>            
           </ul>
           <ul class="nav">
-            <li><img src="/images/QR_Code.png" class="img-responsive"></li>
+            <li><img src="<?php echo $this->baseUrl("/static/images/QR_Code.png");?>" class="img-responsive"></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -76,7 +73,7 @@
 		      </ol>
 		      <div class="carousel-inner" role="listbox">
 		        <div class="item active">
-		          <a href="#"><img src="/images/banner_01.jpg" alt="First slide"></a>
+		          <a href="#"><img src="<?php echo $this->baseUrl("/static/images/banner_01.jpg");?>" alt="First slide"></a>
 <!-- 		          <div class="container"> -->
 <!-- 		            <div class="carousel-caption"> -->
 <!-- 		              <h1>中智信智慧社区</h1> -->
@@ -85,7 +82,7 @@
 <!-- 		          </div> -->
 		        </div>
 		        <div class="item">
-		          <a href="/demo/sqgl"><img src="/images/banner_02.jpg" alt="Second slide"></a>
+		          <a href="<?php echo $this->baseUrl("/demo/sqgl");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_02.jpg");?>" alt="Second slide"></a>
 		          <!--<div class="container">
 		            <div class="carousel-caption">
 		              <h1>Another example headline.</h1>
@@ -94,13 +91,13 @@
 		          </div> -->
 		        </div>
 		        <div class="item">
-		          <a href="/demo/jzgl"><img src="/images/banner_03.jpg" alt="Third slide"></a>
+		          <a href="<?php echo $this->baseUrl("/demo/jzgl");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_03.jpg");?>" alt="Third slide"></a>
 		        </div>
 		        <div class="item">
-		          <a href="/demo/shfw"><img src="/images/banner_04.jpg" alt="Four slide"></a>
+		          <a href="<?php echo $this->baseUrl("/demo/shfw");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_04.jpg");?>" alt="Four slide"></a>
 		        </div>
 		        <div class="item">
-		          <a href="/demo/shfw"><img src="/images/banner_05.jpg" alt="Five slide"></a>
+		          <a href="<?php echo $this->baseUrl("/demo/shfw");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_05.jpg");?>" alt="Five slide"></a>
 		        </div>
 		      </div>
 		      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -151,10 +148,6 @@
     </div>
  </div>
 
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/jquery.plugins/jquery-1.11.1.min.js"></script>
-    <script src="/jquery.plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <?php echo $this->headScript();?>
   </body>
 </html>

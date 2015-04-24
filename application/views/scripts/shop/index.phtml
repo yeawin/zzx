@@ -9,15 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="中智信智慧社区,智慧社区,厦门智慧社区">
     <meta name="author" content="">
-    <link rel="icon" href="./images/favicon.jpg">
+    <link rel="icon" href="<?php echo $this->baseUrl("/static/images/favicon.jpg")?>">
 
     <title>中智信智慧社区-周边商家</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./jquery.plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./css/style.css" rel="stylesheet">
+    <?php echo $this->headLink();?>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -111,12 +108,7 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 
-    <script src="./jquery.plugins/jquery-1.11.1.min.js"></script>
-    <script src="./jquery.plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/ie10-viewport-bug-workaround.js"></script>
-    <script src="./jquery.plugins/jquery.form.js"></script>
-    <script src="./js/public.js"></script>
-    <script src="./js/shop.js"></script>
+    <?php echo $this->headScript();?>
 
   </body>
 </html>

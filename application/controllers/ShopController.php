@@ -14,6 +14,17 @@ class ShopController extends Zend_Controller_Action
         $Shop = new Application_Model_Shop();
         $shoplist = $Shop->getShops();
         $this->view->shoplist = $shoplist;
+        $this->view->headScript()
+        ->prependFile($this->view->baseUrl("/static/js/shop.js"))
+        ->prependFile($this->view->baseUrl("/static/js/public.js"))
+        ->prependFile($this->view->baseUrl("/static/jquery.plugins/jquery.form.js"))
+        ->prependFile($this->view->baseUrl("/static/jquery.plugins/ie10-viewport-bug-workaround.js"))
+        ->prependFile($this->view->baseUrl("/static/jquery.plugins/bootstrap/js/bootstrap.min.js"))
+        ->prependFile($this->view->baseUrl("/static/jquery.plugins/jquery.migrate.js"))
+        ->prependFile($this->view->baseUrl("/static/jquery.plugins/jquery.js"));
+        $this->view->headLink()
+        ->appendStylesheet($this->view->baseUrl("/static/jquery.plugins/bootstrap/css/bootstrap.min.css"))
+        ->appendStylesheet($this->view->baseUrl("/static/css/style.css"));
     }
     
     public function listAction()
@@ -66,7 +77,7 @@ class ShopController extends Zend_Controller_Action
                 return false;
             } else {
                 if ($_FILES["ShopLogo"]["error"] == UPLOAD_ERR_OK) {
-                    $link = "/images/shoplogoes/".md5($Params["ShopName"]).".".substr($_FILES["ShopLogo"]["name"],strpos($_FILES["ShopLogo"]["name"],'.') + 1,strlen($_FILES["ShopLogo"]["name"]) - strpos($_FILES["ShopLogo"]["name"],'.') - 1);
+                    $link = "/shoplogoes/".md5($Params["ShopName"]).".".substr($_FILES["ShopLogo"]["name"],strpos($_FILES["ShopLogo"]["name"],'.') + 1,strlen($_FILES["ShopLogo"]["name"]) - strpos($_FILES["ShopLogo"]["name"],'.') - 1);
                     $destination = PROJECT_PATH."/public".$link;
                     //上传图片到服务器，临时文件，生成图片服务器后删除
                     move_uploaded_file($_FILES["ShopLogo"]["tmp_name"], $destination); //移动到指定目录
@@ -77,7 +88,7 @@ class ShopController extends Zend_Controller_Action
             $data['phone'] = $Params["ServicePhone"];      //商家地址
             $data['address'] = $Params["ShopAddress"];      //商家地址
             $data['remark'] = $Params["ShopRemark"];        //商家描述
-            $data['shop_logo'] = ".".$link;              //商家Logo
+            $data['shop_logo'] = $this->view->baseUrl($link);              //商家Logo
             if ($Shop->insertRecord($data)) {
                 $result['error'] = 0;
                 $result['message'] = '信息提交成功，我们将尽快进行审核！';
