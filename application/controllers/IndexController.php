@@ -12,7 +12,7 @@ class IndexController extends Zend_Controller_Action
     {
         // action body
         $this->view->headScript()
-        ->prependFile($this->view->baseUrl("/static/plugins/ie10-viewport-bug-workaround.js"))
+        ->prependFile($this->view->baseUrl("/static/jquery.plugins/ie10-viewport-bug-workaround.js"))
         ->prependFile($this->view->baseUrl("/static/jquery.plugins/bootstrap/js/bootstrap.min.js"))
         ->prependFile($this->view->baseUrl("/static/jquery.plugins/jquery.migrate.js"))
         ->prependFile($this->view->baseUrl("/static/jquery.plugins/jquery.js"));

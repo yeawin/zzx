@@ -21,9 +21,9 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#navbar_zzx">
     <div class="wrap">
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -34,33 +34,22 @@
           </button>
           <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-logo"></span>&nbsp;eMegasys智慧社区管理系统---中智信智慧社区</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar_zzx" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="//www.xmcii.com" target="_blank">关于我们</a></li>
-            <li><a href="#">在线帮助</a></li>
+            <li><a href="#ourcompay">公司介绍</a></li>
+            <li><a href="#ournews">新闻动态</a></li>
+            <li><a href="#ourproducts">产品中心与解决方案</a></li>
+            <li><a href="#ourprojects">成功案例</a></li>
+            <li><a href="#joinus">加入我们</a></li>
+<!--             <li><a href="//www.xmcii.com" target="_blank">关于我们</a></li> -->
+<!--             <li><a href="#">在线帮助</a></li> -->
          </ul>
         </div><!--/.nav-collapse -->
       </div>          
     </nav>
 	<div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar"> 
-          <li><a href="http://www.54kaka.com/Devccweb/Login.aspx?u=13860157963&p=888888" target="_blank"><span class="glyphicon glyphicon-user"></span>智慧社区管理系统</a></li>       
-            <li><a href="http://110.86.13.82:1500" target="_blank"><span class="glyphicon glyphicon-home"></span>智能建筑管理系统</a></li>            
-            <li><a href="http://121.40.148.177:10808/xm9943/loginWx" target="_blank"><span class="glyphicon glyphicon-weixin"></span>社区微信管理系统</a></li>
-            <li><a href="<?php echo $this->baseUrl("/shop");?>"><span class="glyphicon glyphicon-shopping-cart"></span>中智信社区商家入口</a></li>
-          </ul>
-          <ul class="nav nav-sidebar borderd">
-            <li><a href="#"><span class="glyphicon glyphicon-qq"></span>: 1355850897</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-phone-alt"></span>: 0592-5033910</a></li>            
-          </ul>
-          <ul class="nav">
-            <li><img src="<?php echo $this->baseUrl("/static/images/QR_Code.png");?>" class="img-responsive"></li>
-          </ul>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <!-- Carousel
+	  <div class="row row-item">
+	   <!-- Carousel
     ================================================== -->
 		    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 		      <!-- Indicators -->
@@ -73,7 +62,7 @@
 		      </ol>
 		      <div class="carousel-inner" role="listbox">
 		        <div class="item active">
-		          <a href="#"><img src="<?php echo $this->baseUrl("/static/images/banner_01.jpg");?>" alt="First slide"></a>
+		          <a href="#"><img src="<?php echo $this->baseUrl("/static/images/banner_1.jpg");?>" alt="First slide"></a>
 <!-- 		          <div class="container"> -->
 <!-- 		            <div class="carousel-caption"> -->
 <!-- 		              <h1>中智信智慧社区</h1> -->
@@ -82,7 +71,7 @@
 <!-- 		          </div> -->
 		        </div>
 		        <div class="item">
-		          <a href="<?php echo $this->baseUrl("/demo/sqgl");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_02.jpg");?>" alt="Second slide"></a>
+		          <a href="<?php echo $this->baseUrl("/demo/sqgl");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_2.jpg");?>" alt="Second slide"></a>
 		          <!--<div class="container">
 		            <div class="carousel-caption">
 		              <h1>Another example headline.</h1>
@@ -91,13 +80,13 @@
 		          </div> -->
 		        </div>
 		        <div class="item">
-		          <a href="<?php echo $this->baseUrl("/demo/jzgl");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_03.jpg");?>" alt="Third slide"></a>
+		          <a href="<?php echo $this->baseUrl("/demo/jzgl");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_3.jpg");?>" alt="Third slide"></a>
 		        </div>
 		        <div class="item">
-		          <a href="<?php echo $this->baseUrl("/demo/shfw");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_04.jpg");?>" alt="Four slide"></a>
+		          <a href="<?php echo $this->baseUrl("/demo/shfw");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_4.jpg");?>" alt="Four slide"></a>
 		        </div>
 		        <div class="item">
-		          <a href="<?php echo $this->baseUrl("/demo/shfw");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_05.jpg");?>" alt="Five slide"></a>
+		          <a href="<?php echo $this->baseUrl("/demo/shfw");?>"><img src="<?php echo $this->baseUrl("/static/images/banner_3.jpg");?>" alt="Five slide"></a>
 		        </div>
 		      </div>
 		      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -109,31 +98,112 @@
 		        <span class="sr-only">Next</span>
 		      </a>
 		    </div><!-- /.carousel -->
-           <div class="row">
-	        <div class="col-lg-6">
-	        <h3>社区公告</h3>
-	         <div class="item">
-	         	<ul class="list-group">
-	            	<li class="list-group-item"><a href="http://121.40.148.177/xm9943/article_twxx.php?id=45" target="_blank">欢乐社区行活动开启啦 </a></li>
-	            	<li class="list-group-item"><a href="http://121.40.148.177/xm9943/article_twxx.php?id=46" target="_blank">水电费缴费公告</a></li>
-	            	<li class="list-group-item"><a href="http://121.40.148.177/xm9943/article_twxx.php?id=47" target="_blank">关于高空抛物告示 </a></li>
-	            </ul>        
-	           <p><a class="btn btn-success" href="http://www.app667.com/xm9943/mobile/article_list.php?cat_id=19" role="button">更多 &raquo;</a></p>
-	         </div>
-	        </div>
-	        <div class="col-lg-6">
-	        <h3>社区活动</h3>
-	         <div class="item">
-	            <ul class="list-group">
-	            	<li class="list-group-item"><a href="http://www.app667.com/xm9943/mobile/activity.php?id=5" target="_blank">2014平安居小区圣诞动感之夜 </a></li>
-	            	<li class="list-group-item"><a href="http://www.app667.com/xm9943/mobile/activity.php?id=6" target="_blank">幸福家园首届亲子活动 </a></li>
-	            	<li class="list-group-item"><a href="http://www.app667.com/xm9943/mobile/activity.php?id=7" target="_blank">幸福家园电脑门诊活动</a></li>
-	            </ul>  
-        
-	           <p><a class="btn btn-success" href="#" role="button">更多 &raquo;</a></p>
-	         </div>
-	        </div>      
-	      </div>
+	  </div>
+</div>
+<div class="container"> 
+	<div class="row row-item" id="ourcompay">
+	   <h3>我们做什么</h3>
+	   <div class="col-lg-4">
+	      <p style="font-size: 100px;"><span class="glyphicon glyphicon-home"></span></p>
+          <h2>全平台解决方案</h2>
+          <p>我们开发优秀的、注重用户体验的网站、iOS应用和Android应用，帮你实现平台全覆盖，让你省心省力得到最先进的技术支持。</p>
+        </div>
+        <div class="col-lg-4">
+          <p style="font-size: 100px;"><span class="glyphicon glyphicon-pencil"></span></p>
+          <h2>高质量定制设计</h2>
+          <p>我们用心设计，以用户为中心，范围涵盖交互设计、视觉设计、品牌设计，用设计让您的产品更上一层楼。</p>
+        </div>
+        <div class="col-lg-4">
+        <p style="font-size: 100px;"><span class="glyphicon glyphicon-phone"></span></p>
+          <h2>互联网产品咨询</h2>
+          <p>想做产品不知如何下手？我们帮你制定合理的产品策略，让你脑中的想法变为现实，帮你在移动互联网时代抓住机会。</p>
+        </div>
+	</div>
+	<div class="row row-item" id="ournews">
+	   <h3>新闻动态</h3>
+	   <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+	</div>
+	<div class="row row-item" id="ourproducts">
+	   <h3>产品中心与解决方案</h3>
+	   <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+	</div>
+	<div class="row row-item" id="ourprojects">
+	   <h3>成功案例</h3>
+	   <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+	</div>
+	<div class="row row-item" id="joinus">
+	   <h3>加入我们</h3>
+	   <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Safari bug warning!</h2>
+          <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-success" href="#" role="button">View details »</a></p>
+        </div>
+	</div>
+      <div class="row">
 			      <!-- Site footer -->
 	     <div id="footer" class="row">
 	     <hr>
@@ -143,7 +213,6 @@
 	        </div>      
 
 	     </div>
-        </div>
       </div>
     </div>
  </div>
