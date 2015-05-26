@@ -179,3 +179,6 @@ address{
 .row-item{
 	padding-top: 50px;
 }
+@media (min-width: 768px) {
+.zhengshu{min-height:400px;}
+}
