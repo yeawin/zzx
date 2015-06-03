@@ -176,9 +176,35 @@ body {
 address{
 	margin-bottom:10px;
 }
-.row-item{
+.row-carousel{
 	padding-top: 50px;
 }
-@media (min-width: 768px) {
-.zhengshu{min-height:400px;}
+.row-item{
+	padding-top: 50px;
+	padding-left:15px;
+	padding-right: 15px;
+}
+.zhengshu{min-height:300px;margin-bottom:10px;}
+.anli-item{height:200px; margin-bottom:10px;}
+.anli-item .img-responsive{
+	width:200px;
+	height: 200px;
+}
+.anli-item .glyphicon{
+	margin-right:8px;
+}
+.anli-left{
+	float:left;
+	width: 50%;
+	height:200px;
+}
+.anli-right{
+	float:left;
+	width: 50%;
+	height:200px;
+	padding-left:8px;
+}
+.anli-title, .anli-text{
+	padding-top:35px;
+	padding-bottom:35px;
 }
